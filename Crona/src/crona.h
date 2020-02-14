@@ -4,6 +4,7 @@
 #include <stdio.h>
 
 #include "Application.h"
+#include "Log.h"	
 #include "core.h"
 
 ///entry point

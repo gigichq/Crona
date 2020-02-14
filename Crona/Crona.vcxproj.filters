@@ -1,42 +1,49 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="源文件">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="core">
+      <UniqueIdentifier>{4E40957C-3A77-960D-E363-7C10CF79120F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="crona">
+      <UniqueIdentifier>{F8E33E0F-64F8-66C0-2D7A-0A20994D63F1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="资源文件">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Src">
-      <UniqueIdentifier>{018872ac-12a4-4bea-97ef-36f638292401}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Src\crona">
-      <UniqueIdentifier>{a28804dc-831e-41d8-913d-8af019619937}</UniqueIdentifier>
+    <Filter Include="crona\events">
+      <UniqueIdentifier>{FC7C2213-E8DF-B1B7-9165-EA6D7DA77D3A}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="core.h">
-      <Filter>Src\crona</Filter>
+    <ClInclude Include="src\core\Application.h">
+      <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="Application.h">
-      <Filter>Src\crona</Filter>
+    <ClInclude Include="src\core\EntryPoint.h">
+      <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="crona.h">
-      <Filter>Src</Filter>
+    <ClInclude Include="src\core\Log.h">
+      <Filter>core</Filter>
     </ClInclude>
-    <ClInclude Include="EntryPoint.h">
-      <Filter>Src</Filter>
+    <ClInclude Include="src\core\core.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crona.h" />
+    <ClInclude Include="src\crona\events\ApplicationEvent.h">
+      <Filter>crona\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crona\events\Event.h">
+      <Filter>crona\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crona\events\KeyEvent.h">
+      <Filter>crona\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crona\events\MouseEvent.h">
+      <Filter>crona\events</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Application.cpp">
-      <Filter>Src\crona</Filter>
+    <ClCompile Include="src\core\Application.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\Log.cpp">
+      <Filter>core</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

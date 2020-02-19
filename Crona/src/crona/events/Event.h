@@ -1,14 +1,11 @@
 #pragma once
 #include "core/core.h"
 
-#include <string>
-#include <functional>
-
 namespace Crona
 {
 	enum EventType
 	{	
-		None = 0,
+		NoneEventType = 0,
 		WindowClose, WindowResize,WindowFocus, WindowLostFocus,	WindowMoved,
 		AppTick,AppUpdate, AppRender,
 		KeyPressed, KeyReleased,
@@ -17,7 +14,7 @@ namespace Crona
 
 	enum EventCategory
 	{
-		None = 0,
+		NoneEventCategory = 0,
 		EventCategoryApplication = BIT(0),
 		EventCategoryInput = BIT(1),
 		EventCategoryKeyboard = BIT(2),
@@ -60,7 +57,7 @@ namespace Crona
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.m_Handled = func(static_cast<T&>m_Event);
+				m_Event.m_Handled = func(static_cast<T&>(m_Event));
 				return true;
 			}
 			return false;

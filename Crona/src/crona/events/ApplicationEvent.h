@@ -1,6 +1,5 @@
 #pragma once
 #include "Event.h"
-#include <sstream>
 
 namespace Crona
 {
@@ -31,6 +30,13 @@ namespace Crona
 	public:
 		WindowCloseEvent() = default;
 
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "WindowCloseEvent";
+			return ss.str();
+		}
+
 		EVENT_CLASS_TYPE(WindowClose)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
@@ -39,6 +45,13 @@ namespace Crona
 	{
 	public:
 		AppTickEvent() = default;
+
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "AppTickEvent";
+			return ss.str();
+		}
 
 		EVENT_CLASS_TYPE(AppTick)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)

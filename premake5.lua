@@ -10,6 +10,13 @@ workspace "Crona"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Crona/vendor/GLFW/include"
+
+include "Crona/vendor/GLFW"
+
 project "Crona"
 	location "Crona"
 	kind "SharedLib"
@@ -17,6 +24,9 @@ project "Crona"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "capch.h"
+	pchsource "Crona/src/capch.cpp"
 
 	files
 	{
@@ -27,7 +37,14 @@ project "Crona"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+	
+	links 
+	{ 
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

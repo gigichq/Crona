@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Event.h"
-#include <sstream>
 
 namespace Crona
 {
@@ -52,28 +51,28 @@ namespace Crona
 	class MouseButtonEvent : public Event
 	{
 	public:
-		//inline MouseCode GetMouseButton() const { return m_Button; }
+		inline int GetMouseButton() const { return m_Button; }
 
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	protected:
-		//MouseButtonEvent(MouseCode button)
-		//	: m_Button(button) {}
+		MouseButtonEvent(int button)
+			: m_Button(button) {}
 
-		//MouseCode m_Button;
+		int m_Button;
 	};
 
 	class MouseButtonPressedEvent : public MouseButtonEvent
 	{
 	public:
-		//MouseButtonPressedEvent(MouseCode button)
-		//	: MouseButtonEvent(button) {}
+		MouseButtonPressedEvent(int button)
+			: MouseButtonEvent(button) {}
 
-		//std::string ToString() const override
-		//{
-		//	std::stringstream ss;
-		//	ss << "MouseButtonPressedEvent: " << m_Button;
-		//	return ss.str();
-		//}
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "MouseButtonPressedEvent: " << m_Button;
+			return ss.str();
+		}
 
 		EVENT_CLASS_TYPE(MouseButtonPressed)
 	};
@@ -81,15 +80,15 @@ namespace Crona
 	class MouseButtonReleasedEvent : public MouseButtonEvent
 	{
 	public:
-		//MouseButtonReleasedEvent(MouseCode button)
-		//	: MouseButtonEvent(button) {}
+		MouseButtonReleasedEvent(int button)
+			: MouseButtonEvent(button) {}
 
-		//std::string ToString() const override
-		//{
-		//	std::stringstream ss;
-		//	ss << "MouseButtonReleasedEvent: " << m_Button;
-		//	return ss.str();
-		//}
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "MouseButtonReleasedEvent: " << m_Button;
+			return ss.str();
+		}
 
 		EVENT_CLASS_TYPE(MouseButtonReleased)
 	};

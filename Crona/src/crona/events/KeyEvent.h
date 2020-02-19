@@ -1,8 +1,6 @@
 #pragma once
 #include "Event.h"
 
-#include <sstream>
-
 namespace Crona {
 	class CRONA_API KeyEvent : public Event
 	{
@@ -34,7 +32,7 @@ namespace Crona {
 			return ss.str();
 		}
 
-		EVENT_CLASS_CATEGORY(KeyPressed)
+		EVENT_CLASS_TYPE(KeyPressed)
 	private:
 		int m_RepeatCount;
 	};
@@ -42,7 +40,7 @@ namespace Crona {
 	class CRONA_API KeyReleasedEvent : public KeyEvent
 	{
 	public:
-		KeyReleasedEvent(int keycode, int repeatCount)
+		KeyReleasedEvent(int keycode)
 			:KeyEvent(keycode)
 		{}
 
@@ -53,6 +51,6 @@ namespace Crona {
 			return ss.str();
 		}
 
-		EVENT_CLASS_CATEGORY(KeyReleased)
+		EVENT_CLASS_TYPE(KeyReleased)
 	};
 }

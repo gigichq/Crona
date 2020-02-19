@@ -10,8 +10,15 @@
     <Filter Include="crona\events">
       <UniqueIdentifier>{FC7C2213-E8DF-B1B7-9165-EA6D7DA77D3A}</UniqueIdentifier>
     </Filter>
+    <Filter Include="platform">
+      <UniqueIdentifier>{4A63C33C-3630-1E48-5F49-0CF04B7553D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform\Windows">
+      <UniqueIdentifier>{84B77CA1-70B0-9BF3-99E2-8078853A7BFF}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\capch.h" />
     <ClInclude Include="src\core\Application.h">
       <Filter>core</Filter>
     </ClInclude>
@@ -25,6 +32,9 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="src\crona.h" />
+    <ClInclude Include="src\crona\Window.h">
+      <Filter>crona</Filter>
+    </ClInclude>
     <ClInclude Include="src\crona\events\ApplicationEvent.h">
       <Filter>crona\events</Filter>
     </ClInclude>
@@ -37,13 +47,20 @@
     <ClInclude Include="src\crona\events\MouseEvent.h">
       <Filter>crona\events</Filter>
     </ClInclude>
+    <ClInclude Include="src\platform\Windows\WindowsWindow.h">
+      <Filter>platform\Windows</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\capch.cpp" />
     <ClCompile Include="src\core\Application.cpp">
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="src\core\Log.cpp">
       <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\Windows\WindowsWindow.cpp">
+      <Filter>platform\Windows</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

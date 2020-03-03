@@ -1,6 +1,11 @@
 /.vs/
-/Bin/
-/Bin-int/
-/Bin int/
+/bin/
+/bin-int/
+/Crona/vendor/GLAD/bin/
+/Crona/vendor/GLAD/bin-int/
+/Crona/vendor/GLFW/bin/
+/Crona/vendor/GLFW/bin-int/
+/Crona/vendor/imgui/bin/
+/Crona/vendor/imgui/bin-int/
 
 *.user

@@ -1,5 +1,5 @@
 #pragma once
-#include "core/core.h"
+#include "crona/core.h"
 
 namespace Crona
 {
@@ -8,7 +8,7 @@ namespace Crona
 		NoneEventType = 0,
 		WindowClose, WindowResize,WindowFocus, WindowLostFocus,	WindowMoved,
 		AppTick,AppUpdate, AppRender,
-		KeyPressed, KeyReleased,
+		KeyPressed, KeyReleased,KeyTyped,
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled,
 	};
 
@@ -41,7 +41,7 @@ namespace Crona
 		{
 			return GetCategoryFlags() & category;
 		}
-	protected:
+	//protected:
 		bool m_Handled = false;
 	};
 

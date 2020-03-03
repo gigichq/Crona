@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="core">
-      <UniqueIdentifier>{4E40957C-3A77-960D-E363-7C10CF79120F}</UniqueIdentifier>
-    </Filter>
     <Filter Include="crona">
       <UniqueIdentifier>{F8E33E0F-64F8-66C0-2D7A-0A20994D63F1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crona\ImGui">
+      <UniqueIdentifier>{227310EF-8E28-89E4-171D-83BB83D17FE8}</UniqueIdentifier>
     </Filter>
     <Filter Include="crona\events">
       <UniqueIdentifier>{FC7C2213-E8DF-B1B7-9165-EA6D7DA77D3A}</UniqueIdentifier>
@@ -13,26 +13,38 @@
     <Filter Include="platform">
       <UniqueIdentifier>{4A63C33C-3630-1E48-5F49-0CF04B7553D6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="platform\OpenGL">
+      <UniqueIdentifier>{3E351A86-AAC0-874A-B3D1-0A3F1FDCE34A}</UniqueIdentifier>
+    </Filter>
     <Filter Include="platform\Windows">
       <UniqueIdentifier>{84B77CA1-70B0-9BF3-99E2-8078853A7BFF}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\capch.h" />
-    <ClInclude Include="src\core\Application.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="src\core\EntryPoint.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="src\core\Log.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="src\core\core.h">
-      <Filter>core</Filter>
-    </ClInclude>
     <ClInclude Include="src\crona.h" />
+    <ClInclude Include="src\crona\Application.h">
+      <Filter>crona</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crona\EntryPoint.h">
+      <Filter>crona</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crona\ImGui\ImGuiLayer.h">
+      <Filter>crona\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crona\Layer.h">
+      <Filter>crona</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crona\LayerStack.h">
+      <Filter>crona</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crona\Log.h">
+      <Filter>crona</Filter>
+    </ClInclude>
     <ClInclude Include="src\crona\Window.h">
+      <Filter>crona</Filter>
+    </ClInclude>
+    <ClInclude Include="src\crona\core.h">
       <Filter>crona</Filter>
     </ClInclude>
     <ClInclude Include="src\crona\events\ApplicationEvent.h">
@@ -47,17 +59,32 @@
     <ClInclude Include="src\crona\events\MouseEvent.h">
       <Filter>crona\events</Filter>
     </ClInclude>
+    <ClInclude Include="src\platform\OpenGL\imguiOpenglRenderer.h">
+      <Filter>platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\platform\Windows\WindowsWindow.h">
       <Filter>platform\Windows</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\capch.cpp" />
-    <ClCompile Include="src\core\Application.cpp">
-      <Filter>core</Filter>
+    <ClCompile Include="src\crona\Application.cpp">
+      <Filter>crona</Filter>
     </ClCompile>
-    <ClCompile Include="src\core\Log.cpp">
-      <Filter>core</Filter>
+    <ClCompile Include="src\crona\ImGui\ImGuiLayer.cpp">
+      <Filter>crona\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\crona\Layer.cpp">
+      <Filter>crona</Filter>
+    </ClCompile>
+    <ClCompile Include="src\crona\LayerStack.cpp">
+      <Filter>crona</Filter>
+    </ClCompile>
+    <ClCompile Include="src\crona\Log.cpp">
+      <Filter>crona</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\OpenGL\imguiOpenglRenderer.cpp">
+      <Filter>platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\platform\Windows\WindowsWindow.cpp">
       <Filter>platform\Windows</Filter>

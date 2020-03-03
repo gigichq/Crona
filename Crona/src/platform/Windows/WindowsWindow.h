@@ -1,8 +1,8 @@
 #pragma once
-#include "core/core.h"
+#include "crona/core.h"
 #include "crona/Window.h"
 
-#include <GLFW/glfw3.h>	
+struct GLFWwindow;
 
 namespace Crona
 {

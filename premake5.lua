@@ -14,8 +14,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Crona/vendor/GLFW/include"
+IncludeDir["GLAD"] = "Crona/vendor/GLAD/include"
+IncludeDir["Imgui"] = "Crona/vendor/imgui"
 
 include "Crona/vendor/GLFW"
+include "Crona/vendor/GLAD"
+include "Crona/vendor/imgui"
 
 project "Crona"
 	location "Crona"
@@ -38,12 +42,16 @@ project "Crona"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.GLAD}",
+		"%{IncludeDir.Imgui}"
 	}
 	
 	links 
 	{ 
 		"GLFW",
+		"GLAD",
+		"Imgui",
 		"opengl32.lib"
 	}
 
@@ -55,7 +63,8 @@ project "Crona"
 		defines
 		{
 			"CRONA_BUILD_DLL",
-			"CA_PLATFORM_WINDOWS"
+			"CA_PLATFORM_WINDOWS",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
@@ -93,7 +102,7 @@ project "Sandbox"
 	{
 		"Crona/vendor/spdlog/include",
 		"Crona/src",
-		"Crona/src/core",
+		"Crona/src/crona",
 	}
 
 	links
